@@ -1,0 +1,25 @@
+.chart-card {
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.chart-card h3 {
+  margin: 0 0 14px;
+  color: #001847;
+}
+
+.chart-insights {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(222, 227, 232, 0.45);
+  text-align: left;
+}
+
+.chart-insights p {
+  margin: 7px 0;
+  color: #4c4546;
+  font-size: 14px;
+}

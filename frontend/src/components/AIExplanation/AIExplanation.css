@@ -1,0 +1,21 @@
+.ai-card {
+  padding: 0;
+}
+
+.ai-card h2 {
+  margin-bottom: 18px;
+  color: #001847;
+}
+
+.ai-content {
+  display: grid;
+  gap: 12px;
+}
+
+.ai-content p {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.54);
+  color: #4c4546;
+  line-height: 1.65;
+}

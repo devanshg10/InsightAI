@@ -1,0 +1,158 @@
+.glass-panel,
+.empty-state {
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.glass-panel {
+  min-width: 280px;
+  min-height: 220px;
+  padding: 28px;
+  border-radius: 22px;
+  overflow: auto;
+}
+
+.draggable-panel {
+  resize: both;
+  max-width: 100%;
+}
+
+.draggable-panel::after {
+  content: "";
+  position: sticky;
+  float: right;
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 8px -12px -12px 8px;
+  border-right: 2px solid rgba(82, 129, 238, 0.34);
+  border-bottom: 2px solid rgba(82, 129, 238, 0.34);
+  border-bottom-right-radius: 4px;
+  pointer-events: none;
+}
+
+.panel-grip {
+  margin-bottom: 22px;
+  cursor: move;
+  user-select: none;
+}
+
+.panel-grip span {
+  display: block;
+  margin-bottom: 6px;
+  color: #7e7576;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.panel-grip strong {
+  color: #000;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.wide {
+  min-height: 300px;
+}
+
+.full-width {
+  margin-top: 22px;
+  min-height: 240px;
+  resize: vertical;
+}
+
+.glass-panel select,
+.chat-window input,
+.pandas-panel textarea {
+  min-height: 44px;
+  width: 100%;
+  border: 1px solid rgba(207, 196, 197, 0.5);
+  border-radius: 12px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+  outline: 0;
+}
+
+.glass-panel h2,
+.chat-window h2 {
+  margin-bottom: 14px;
+  color: #001847;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.glass-panel ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.glass-panel li {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.52);
+  color: #4c4546;
+  line-height: 1.45;
+}
+
+.glass-panel label {
+  cursor: pointer;
+}
+
+.glass-panel button:not(.primary-action) {
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 18px;
+  background: #000;
+  color: #fff;
+  font-weight: 800;
+}
+
+.wide > h2,
+.wide > h1,
+.full-width > h2 {
+  display: none;
+}
+
+.glass-panel > div:first-of-type h1 {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin: 0 0 8px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: rgba(222, 227, 232, 0.72);
+  color: #001847;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.glass-panel > div:first-of-type h2 {
+  color: #7e7576;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.glass-panel select:focus,
+.chat-window input:focus,
+.pandas-panel textarea:focus {
+  border-color: rgba(82, 129, 238, 0.72);
+  box-shadow: 0 0 0 4px rgba(82, 129, 238, 0.12);
+}
+
+@media (max-width: 640px) {
+  .glass-panel {
+    padding: 20px;
+    resize: vertical;
+  }
+}

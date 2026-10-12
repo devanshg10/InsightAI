@@ -1,0 +1,97 @@
+.glass-panel .table-container {
+  overflow-x: auto;
+  border-radius: 16px;
+  max-height: 250px;
+  margin-top: 14px;
+}
+
+.table-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+  gap: 12px;
+}
+
+.table-toolbar input {
+  min-height: 44px;
+  border: 1px solid rgba(207, 196, 197, 0.5);
+  border-radius: 12px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+  outline: 0;
+}
+
+.glass-panel .preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.glass-panel .preview-table th,
+.glass-panel .preview-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(207, 196, 197, 0.4);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.glass-panel .preview-table th {
+  background: rgba(218, 226, 255, 0.55);
+  color: #001847;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.glass-panel .preview-table th button {
+  min-height: auto !important;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent !important;
+  color: inherit !important;
+  font: inherit;
+  text-align: left;
+  text-transform: inherit;
+}
+
+.glass-panel .preview-table td {
+  color: #4c4546;
+  font-size: 14px;
+}
+
+.glass-panel .preview-table tr:hover td {
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  color: #5f6569;
+  font-size: 13px;
+}
+
+.pagination-row div {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-row button {
+  min-height: 34px !important;
+  padding: 0 12px !important;
+}
+
+@media (max-width: 720px) {
+  .table-toolbar,
+  .pagination-row {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

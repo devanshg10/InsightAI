@@ -1,0 +1,21 @@
+# Environment variables & secrets
+.env
+.env.*
+backend/.env
+
+# Python virtual environment & caches
+venv/
+backend/venv/
+__pycache__/
+*.py[cod]
+
+# Node modules & build output
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# macOS & editor files
+.DS_Store
+.vscode/
+.idea/

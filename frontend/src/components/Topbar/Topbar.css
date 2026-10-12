@@ -1,0 +1,470 @@
+/* ============================================
+   NEUMORPHIC TOPBAR DESIGN SYSTEM
+   Add these styles to your existing Topbar.css
+   ============================================ */
+
+/* Neumorphic Design Tokens */
+:root {
+  --neo-base: #e0e5ec;
+  --neo-light-shadow: rgba(255, 255, 255, 0.7);
+  --neo-dark-shadow: rgba(163, 177, 198, 0.5);
+  --neo-accent: #a3b1c6;
+  --neo-text: #495057;
+  --neo-text-light: #6c757d;
+  --neo-radius: 12px;
+  --neo-transition: 120ms cubic-bezier(0.23, 1, 0.32, 1);
+  
+  /* Dark theme tokens (for your current dark topbar) */
+  --neo-dark-base: #1a1f2e;
+  --neo-dark-light-shadow: rgba(255, 255, 255, 0.1);
+  --neo-dark-dark-shadow: rgba(0, 0, 0, 0.5);
+  --neo-dark-accent: #6c7a9e;
+  --neo-dark-text: #515357;
+  --neo-dark-text-light: #474c52;
+}
+
+/* ============================================
+   TOPBAR NEUMORPHIC STYLING (DARK THEME)
+   ============================================ */
+
+.neo-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+  background: #e0e5ec;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--neo-dark-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 
+    0 8px 16px rgba(163, 177, 198, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all var(--neo-transition);
+  position: relative;
+  
+}
+
+/* Topbar Left Section */
+.neo-topbar-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.neo-topbar-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--neo-dark-text);
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.neo-topbar-subtitle {
+  font-size: 14px;
+  opacity: 0.6;
+  color: var(--neo-dark-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Topbar Actions Container */
+.neo-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+/* ============================================
+   3D NEUMORPHIC BUTTON - MAIN FEATURE
+   ============================================ */
+
+.neo-3d-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  background: linear-gradient(135deg, #2a3142 0%, #1f2632 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--neo-dark-text);
+  transition: all var(--neo-transition);
+  outline: none;
+  
+  /* 3D Effect - Initial Shadow */
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  
+  transform: translateY(0);
+  filter: brightness(1);
+  
+}
+.neo-3d-button{
+  background: var(--neo-base);
+
+  color: var(--neo-text);
+
+  box-shadow:
+      -6px -6px 12px var(--neo-light-shadow),
+       6px 6px 12px var(--neo-dark-shadow);
+}
+.neo-3d-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.neo-button-text {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: px;
+  letter-spacing: 0.3px;
+}
+
+/* 3D Button - Hover State (Ask Ai) */
+.neo-3d-button:not(:disabled):hover {
+  transform: none;
+  background: var(--neo-base);
+  box-shadow:
+      -6px -6px 12px var(--neo-light-shadow),
+       6px 6px 12px var(--neo-dark-shadow);
+  filter: none;
+}
+
+/* 3D Button - Active Press State (Pressed Into Surface) */
+.neo-3d-button:not(:disabled):active {
+  transform: none;
+
+  background: var(--neo-base);
+  color: var(--neo-text);
+
+  box-shadow:
+    -6px -6px 12px var(--neo-light-shadow),
+     6px 6px 12px var(--neo-dark-shadow);
+
+  filter: none;
+}
+
+/* 3D Button - Active State (Highlighted) */
+.neo-3d-button.active {
+  background: var(--neo-base);
+  color: var(--neo-text);
+  border: 1px solid transparent;
+
+  box-shadow:
+    -6px -6px 12px var(--neo-light-shadow),
+     6px 6px 12px var(--neo-dark-shadow);
+
+  filter: none;
+}
+
+
+.neo-3d-button.active:hover 
+  .neo-3d-button.active:hover {
+    transform: none;
+}
+
+
+/* 3D Button - Disabled State */
+.neo-3d-button:disabled,
+.neo-3d-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Focus State for Accessibility */
+.neo-3d-button:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.5);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   ICON BUTTONS - NEUMORPHIC STYLE
+   ============================================ */
+
+.neo-icon-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.neo-icon-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--neo-dark-text);
+  cursor: pointer;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--neo-transition);
+  outline: none;
+  color: rgb(103, 102, 102);
+  /* Subtle 3D effect */
+  background: #f4f5f6;
+
+  box-shadow:
+  -3px -10px 15px #ffffff,
+  -3px -5px 8px #ffffff,
+  -10px 0px 15px #ffffff,
+  3px 10px 12px rgba(0, 0, 0, 0.2);
+}
+
+.neo-icon-button:hover {
+  
+    transform: scale(1.1); /* Button grows slightly */
+    box-shadow:
+      -3px -15px 20px #ffffff,
+      -3px -10px 10px #ffffff,
+      -10px 0px 15px #ffffff,
+      5px 15px 15px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+/* ============================================
+   Topbar other Icon when clicked
+   ============================================ */
+.neo-icon-button:active {
+  transform: none;
+
+  background: var(--neo-base);
+  color: rgb(103, 102, 102);
+
+  box-shadow:
+      -5px -5px 10px var(--neo-light-shadow),
+       5px 5px 10px var(--neo-dark-shadow);
+}
+
+.neo-icon-button:focus-visible {
+  outline: 1px solid rgba(99, 102, 241, 0.5);
+  outline-offset: 1px;
+}
+
+/* ============================================
+   AVATAR - NEUMORPHIC STYLE
+   ============================================ */
+
+.neo-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--neo-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(103, 102, 102);
+  background-color: #f4f5f6;
+  transition: all var(--neo-transition);
+  
+  /* 3D Avatar Effect */
+  box-shadow:
+  -3px -10px 15px #ffffff,
+  -3px -5px 8px #ffffff,
+  -10px 0px 15px #ffffff,
+  3px 10px 12px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .neo-topbar {
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 45px;
+    align-items: flex-start;
+  }
+
+  .neo-topbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .neo-3d-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .neo-icon-button {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .neo-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .neo-topbar-left {
+    width: 100%;
+  }
+
+  .neo-topbar-title {
+    font-size: 13px;
+  }
+
+  .neo-topbar-subtitle {
+    font-size: 10px;
+  }
+
+  .neo-3d-button .neo-button-text {
+    display: none;
+  }
+
+  .neo-3d-button {
+    padding: 6px 10px;
+  }
+
+  .neo-icon-actions {
+    gap: 8px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY & MOTION PREFERENCES
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .neo-topbar,
+  .neo-3d-button,
+  .neo-icon-button,
+  .neo-avatar {
+    transition: none;
+  }
+
+  .neo-3d-button:hover,
+  .neo-3d-button:active,
+  .neo-icon-button:hover,
+  .neo-icon-button:active,
+  .neo-avatar:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   LIGHT MODE VARIANT (Optional)
+   Uncomment if you want to support light theme
+   ============================================ */
+
+/*
+.light-theme {
+  --neo-base: #e0e5ec;
+  --neo-light-shadow: rgba(255, 255, 255, 0.7);
+  --neo-dark-shadow: rgba(163, 177, 198, 0.5);
+  --neo-accent: #a3b1c6;
+  --neo-text: #495057;
+  --neo-text-light: #6c757d;
+}
+
+.light-theme .neo-topbar {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.light-theme .neo-topbar-title {
+  color: var(--neo-text);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.light-theme .neo-3d-button {
+  background: linear-gradient(135deg, #f0f3f7 0%, #e8ecf1 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--neo-text);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .neo-3d-button:hover {
+  background: linear-gradient(135deg, #f5f8fc 0%, #eef2f7 100%);
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.2),
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+*/
+
+/* ==============================
+   Pandas Toggle Switch
+============================== */
+
+.neo-toggle-switch {
+  position: relative;
+  width: 130px;
+  height: 50px;
+  background: #e8e8e8;
+  border-radius: 50px;
+  cursor: pointer;
+
+  box-shadow:
+  -3px -10px 15px #ffffff,
+  -3px -5px 8px #ffffff,
+  -10px 0px 15px #ffffff,
+  3px 10px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+/* Sliding button */
+
+.neo-toggle-slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 60px;
+  height: 40px;
+
+  border-radius: 50px;
+
+  background: #e8e8e8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+      -3px -10px 15px #f7f5f5,
+  -3px -5px 8px #ffffff,
+  -10px 0px 15px #ffffff,
+  3px 10px 12px rgba(0, 0, 0, 0.2);
+
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* Slide to the right when active */
+
+.neo-toggle-switch.active .neo-toggle-slider {
+  left: 65px;
+}

@@ -1,0 +1,11 @@
+:root {
+  --surface: rgba(255, 255, 255, 0.68);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --surface-blue: rgba(234, 237, 255, 0.72);
+  --ink: #001847;
+  --muted: #5f6569;
+  --line: rgba(207, 196, 197, 0.55);
+  --blue: #5281ee;
+  --black: #000000;
+  --shadow: 0 24px 70px rgba(82, 129, 238, 0.12);
+}

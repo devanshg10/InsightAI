@@ -1,0 +1,97 @@
+.chat-page {
+  padding: 1px 0 24px;
+  background: var(--neo-base);
+}
+
+.chat-window p {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(222, 227, 232, 0.45);
+  color: #4c4546;
+}
+
+.chat-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 760px);
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
+  transition: grid-template-columns 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.chat-layout.pandas-open {
+  grid-template-columns: minmax(360px, 0.95fr) minmax(360px, 0.85fr);
+  justify-content: stretch;
+}
+
+.chat-window {
+  min-height: 520px;
+  resize: both;
+  overflow: auto;
+}
+
+.assistant-window {
+  min-height: calc(100vh - 180px);
+}
+
+.pandas-window {
+  display: none;
+  opacity: 0;
+  transform: translateX(28px) scale(0.97);
+  transform-origin: top right;
+}
+
+.pandas-open .pandas-window {
+  display: block;
+  animation: panelPop 340ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.llm-status-card strong,
+.pandas-panel label {
+  display: block;
+  color: #000;
+  font-weight: 900;
+}
+
+
+.pandas-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.pandas-panel label {
+  font-size: 13px;
+}
+
+.pandas-panel textarea {
+  min-height: 130px;
+  padding: 16px;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  line-height: 1.5;
+}
+
+.pandas-output {
+  max-height: 2900px;
+  overflow: auto;
+  margin: 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.84);
+  color: #f6f8fa;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.pandas-error {
+  background: rgba(98, 20, 20, 0.9);
+}
+
+@media (max-width: 980px) {
+  .chat-layout {
+    grid-template-columns: 1fr;
+  }
+}
