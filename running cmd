@@ -8,22 +8,3 @@ cd ~/InsightAI/frontend
 npm run dev
 
 
-backup CHARTS CODE
- <h2>Charts</h2>
-          {result.chart_data.map((chart, index) => (
-            <div key={index}>
-              <h3>{chart.column}</h3>
-
-              <BarChart
-                width={500}
-                height={300}
-                data={chart.data}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="value" />
-              </BarChart>
-            </div>
-          ))}
