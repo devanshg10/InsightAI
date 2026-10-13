@@ -6,8 +6,6 @@
 - CSV upload
 - Dataset summary
 - Data preview table
-
-## Next
 - Dashboard cards
 - Charts
 - AI insights
