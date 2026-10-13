@@ -11,9 +11,9 @@
 [![Live Application](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20InsightAI%20on%20Vercel-5281ee?style=for-the-badge&logo=vercel&logoColor=white)](https://your-insightai.vercel.app)
 [![Backend API](https://img.shields.io/badge/⚡%20Backend%20API-FastAPI%20on%20Render-001847?style=for-the-badge&logo=render&logoColor=white)](https://your-backend.onrender.com)
 
-**👉 [CLICK HERE TO OPEN THE LIVE APPLICATION](https://your-insightai.vercel.app) 👈**
+**👉 [CLICK HERE TO OPEN THE LIVE APPLICATION](https://insightai-nine.vercel.app) 👈**
 
-*(Replace the placeholder URLs above with your deployed Vercel and Render links)*
+
 
 </div>
 
